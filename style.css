@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* box-sizing: border-box; */
+}
+
+.body {
+  width: 375px;
+  overflow-x: hidden;
+}
+
+/* header section start */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #3c3a39;
+}
+
+.header img {
+  width: 160px;
+  height: 45px;
+  margin: 24px 2px 14px 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+.navbar {
+  display: none;
+}
+
+/* main section start */
+
+.main-part {
+  width: 375px;
+  background: #1c1a19;
+}
+
+.main-article {
+  width: 375px;
+  padding-left: 24px;
+}
+
+.main-article h1 {
+  padding-top: 120px;
+  width: 327px;
+  height: 124px;
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+}
+
+.main-article h2 {
+  padding-top: 12px;
+  width: 327px;
+  height: 27px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff5e1;
+}
+
+.main-article p {
+  padding-top: 12px;
+  width: 327px;
+  height: 123px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.social-icons {
+  padding-left: 30px;
+}
+
+.social-icons ul li {
+  padding-top: 22px;
+  float: left;
+}
+
+.main-part img {
+  margin-top: -110px;
+}
+
+/* word section start */
+
+.work-section {
+  margin: 0 auto;
+  width: 375px;
+}
+
+.work-section h2 {
+  text-align: center;
+  margin-top: 120px;
+  padding: 24px 0;
+  width: 327px;
+  height: 83px;
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #1c1a19;
+}
+
+.work-section img {
+  margin-top: 24px;
+}
+
+.work-section-a .img {
+  background-image: url(images/workmobile-img.png);
+  background-repeat: no-repeat;
+  width: 170%;
+  height: 236px;
+  margin-top: 80px;
+}
+
+.work-section-b {
+
+}
+
+.work-section-b h3 {
+  margin-top: 24px;
+  width: 327px;
+  height: 36px;
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #091e42;
+}
+
+.work-section-b p {
+  margin-top: 12px;
+  width: 327px;
+  height: 147px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #091e42;
+}
+
+.work-section-b ul {
+  display: flex;
+  list-style: none;
+}
+
+.work-section-b li {
+  margin-right: 12px;
+
+  /* width: 42px; */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #091e42;
+  padding: 10px 12px;
+  border: 1px solid #000;
+}
+
+.work-section-b button {
+  margin-top: 12px;
+}
+
+.work-section-b button {
+  width: 124px;
+  height: 48px;
+  background: #ff6b00;
+  color: white;
+}
+
+.work-section-b button:hover {
+  width: 124px;
+  height: 48px;
+  background: #fff5e1;
+  color: #ff6b00;
+}
+
+/* work section end */
+
+/* card section start */
+.single-card {
+  background-image: url(images/card-1.png);
+  background-repeat: no-repeat;
+  height: 386px;
+  width: 327px;
+}
+
+.single-card h3 {
+  padding-top: 84px;
+  width: 295px;
+  height: 81px;
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.single-card p {
+  padding-top: 12px;
+  width: 295px;
+  height: 87px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.single-card ul {
+  padding-top: 12px;
+  list-style: none;
+}
+
+.single-card ul li {
+  float: left;
+  width: 71px;
+
+  /* height: 20px; */
+  margin-left: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.single-card button {
+  padding-top: 12px;
+  width: 327px;
+  height: 48px;
+  color: #fff;
+  background: #ff6b00;
+  padding-bottom: 12px;
+}
+
+.single-card button:hover {
+  padding-top: 12px;
+  width: 327px;
+  height: 48px;
+  color: #ff6b00;
+  background: #fff5e1;
+  padding-bottom: 12px;
+}
+
+.card-button {
+  margin-top: 12px;
+}
