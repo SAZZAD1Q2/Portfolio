@@ -47,7 +47,7 @@
   padding-top: 120px;
   width: 327px;
   height: 124px;
-  font-family: 'Crete Round';
+  font-family: "Crete Round";
   font-style: normal;
   font-weight: 400;
   font-size: 56px;
@@ -60,7 +60,7 @@
   padding-top: 12px;
   width: 327px;
   height: 27px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -72,7 +72,7 @@
   padding-top: 12px;
   width: 327px;
   height: 123px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -106,7 +106,7 @@
   padding: 24px 0;
   width: 327px;
   height: 83px;
-  font-family: 'Crete Round';
+  font-family: "Crete Round";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -127,14 +127,13 @@
 }
 
 .work-section-b {
-
 }
 
 .work-section-b h3 {
   margin-top: 24px;
   width: 327px;
   height: 36px;
-  font-family: 'Crete Round';
+  font-family: "Crete Round";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -146,7 +145,7 @@
   margin-top: 12px;
   width: 327px;
   height: 147px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -163,7 +162,7 @@
   margin-right: 12px;
 
   /* width: 42px; */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -205,7 +204,7 @@
   padding-top: 84px;
   width: 295px;
   height: 81px;
-  font-family: 'Crete Round';
+  font-family: "Crete Round";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -217,7 +216,7 @@
   padding-top: 12px;
   width: 295px;
   height: 87px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -236,7 +235,7 @@
 
   /* height: 20px; */
   margin-left: 12px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -268,3 +267,290 @@
 .card-button {
   margin-top: 12px;
 }
+
+/* about section start */
+
+.about {
+  width: 375px;
+  position: relative;
+
+  background: #1c1a19;
+}
+
+.about-article h2 {
+  padding-top: 120px;
+  width: 327px;
+  height: 79px;
+
+  font-family: "Crete Round";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 88px;
+
+  letter-spacing: 0.37px;
+
+  color: #ff6b00;
+}
+
+.about-article p {
+  margin-top: 24px;
+  width: 327px;
+  height: 148px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f4f5f7;
+}
+
+.about-article button {
+  width: 161px;
+  height: 48px;
+  background: #ff6b00;
+  width: 167px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.about-article button:hover {
+  width: 161px;
+  height: 48px;
+  background: #fff5e1;
+  width: 167px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #f55800;
+}
+
+.about-section-a {
+  position: relative;
+}
+
+.about-section-a .img {
+  position: absolute;
+  right: -40px;
+  top: 355px;
+  background-image: url(images/about-img.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 250px;
+  border: none;
+}
+
+.about .about-vector {
+  position: absolute;
+  left: 0px;
+  top: 632px;
+  background-image: url(images/about-vector.png);
+  background-repeat: no-repeat;
+  width: 327px;
+  height: 1px;
+  border: none;
+}
+
+/* about section b */
+
+.about-section-b {
+  /* margin: 0 auto; */
+  margin-top: 320px;
+  color: white;
+  text-align: center;
+  padding-bottom: 131px;
+}
+
+.about-section-b .language {
+  /* color: white; */
+}
+
+.about-section-b h5 {
+  width: 164px;
+  height: 24px;
+  font-family: "InaiMathi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+}
+
+.language,
+.framework,
+.skills {
+  position: relative;
+  padding-bottom: 12px;
+}
+.language img {
+  position: absolute;
+  top: 12px;
+  left: 75px;
+  width: 28px;
+}
+
+.framework img {
+  position: absolute;
+  top: 12px;
+  left: 74px;
+  width: 18px;
+}
+
+.skills img {
+  position: absolute;
+  top: 12px;
+  left: 118px;
+  width: 20px;
+}
+.skills h5 {
+  margin: 0 auto;
+}
+
+.language h5 {
+  margin: 0 auto;
+}
+
+.framework h5 {
+  margin: 0 auto;
+}
+.about-section-b ul li {
+  list-style: none;
+  text-align: center;
+  margin-top: 35px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+  color: #ffffff;
+}
+
+/* contact section start */
+.contact-section-a {
+}
+
+.contact-section-a p {
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 327px;
+  height: 216px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+.contact-section-b {
+  margin: 0 auto;
+  margin-top: 73px;
+}
+.contact-section-b form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+}
+.contact-section-b form input {
+  padding: 14px 0 14px 12px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  color: #979493;
+}
+.contact-section-b form img {
+  width: 327px;
+  height: 1px;
+  margin-bottom: 39px;
+}
+
+.contact-section-b form textarea {
+  height: 114px;
+  padding: 12px 0 0 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #979493;
+  background: #fbf8f7;
+  border: none;
+}
+
+.contact-section-b form button {
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 124px;
+  padding-left: 12px;
+  width: 131px;
+  height: 48px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: #ff6b00;
+}
+
+.contact-section-b form button:hover {
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 124px;
+  padding-left: 12px;
+  width: 131px;
+  height: 48px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background: #fff5e1;
+  color: #f55800;
+}
+
+/* contact section end */
+
+/* footer section start */
+.footer {
+  text-align: center;
+  margin: 0 auto;
+}
+.footer img{
+  max-width: 327px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 23px;
+}
+
+.footer ul {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.footer ul li{
+margin-right: 12px;
+}
+/* footer section end */
