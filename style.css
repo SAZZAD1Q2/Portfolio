@@ -39,6 +39,10 @@ a {
   display: none;
 }
 
+.cross_btn {
+  display: none;
+}
+
 .name-img {
   animation: rotate 11s infinite;
 }
@@ -698,6 +702,10 @@ a {
   }
 
   .hambrg-btn-img {
+    display: none;
+  }
+
+  .cross_btn {
     display: none;
   }
 

@@ -1,14 +1,16 @@
-let btn = document.querySelector('#btn_hambrg');
+const btn = document.querySelector('#btn_hambrg');
 
+btn.addEventListener('click', () => {
+  const navbar = document.querySelector('.navbar');
 
-btn.addEventListener('click',function() {
-    const navbar = document.querySelector('.navbar')
-    
- 
-  const p = document.createElement('p');
-  p.textContent = 'dsfjadlkjfkalsjfkafjf';
-  p.style.display = 'block';
-  navbar.appendChild(p);
-   
+  navbar.style.disply = 'block';
+  navbar.classList.toggle('show');
+});
 
+const crossBtn = document.querySelector('.cross_btn');
+
+crossBtn.addEventListener('click', () => {
+  const navbar = document.querySelector('.navbar');
+
+  navbar.classList.toggle('hide');
 });
