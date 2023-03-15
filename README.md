@@ -145,7 +145,7 @@ Github
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-
+- If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
