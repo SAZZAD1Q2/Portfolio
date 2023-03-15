@@ -697,6 +697,10 @@ a {
     display: block;
   }
 
+  .hambrg-btn-img {
+    display: none;
+  }
+
   .header .navbar ul {
     display: flex;
     justify-content: center;
