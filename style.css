@@ -21,12 +21,10 @@ a {
 /* header section start */
 
 .header {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background: #3c3a39;
-  z-index: 1;
 }
 
 .header img {
