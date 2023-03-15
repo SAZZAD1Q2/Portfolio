@@ -33,6 +33,9 @@
 **[Portfolio]** is a Microverse assined project.
 
 ## 🛠 Built With <a name="built-with"></a>
+<li>Html</li>
+<li>Css</li>
+<li>JavaScript</li>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -68,6 +71,7 @@
 - **[HTML]**
 - **[Css]**
 - **[Animation]**
+- **[JavaScript]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +85,7 @@
 
 > Describe how a new developer could make use of your project.
 
-Git clone
+Git clone https://github.com/SAZZAD1Q2/Portfolio.git
 Run in your browser
 
 ### Prerequisites
