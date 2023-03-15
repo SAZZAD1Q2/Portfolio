@@ -28,7 +28,7 @@
 
 # 📖 [Portfolio] <a name="Portfolio"></a>
 
-> I make this with the instraction of Microverse.
+> I make this with the help instraction of Microverse.
 
 **[Portfolio]** is a Microverse assined project.
 
