@@ -154,7 +154,6 @@ const ul = document.querySelector('.work-ul');
 for (let i = 0; i < myProject.workTech.length; i += 1) {
   const li = document.createElement('li');
   li.textContent = myProject.workTech[i];
-
   ul.appendChild(li);
 }
 
@@ -234,7 +233,7 @@ workBtn1.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-
+      body.reload();
       isClicked = false;
     } else {
       isClicked = true;
@@ -259,7 +258,7 @@ workBtn2.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-
+      body.reload();
       isClicked = false;
     } else {
       isClicked = true;
@@ -284,7 +283,7 @@ workBtn3.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-
+      body.reload();
       isClicked = false;
     } else {
       isClicked = true;
@@ -309,7 +308,7 @@ workBtn4.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-
+      body.reload();
       isClicked = false;
     } else {
       isClicked = true;
@@ -334,7 +333,7 @@ workBtn5.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-
+      body.reload();
       isClicked = false;
     } else {
       isClicked = true;
@@ -359,7 +358,7 @@ workBtn6.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-
+      body.reload();
       isClicked = false;
     } else {
       isClicked = true;
