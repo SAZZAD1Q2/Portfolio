@@ -26,11 +26,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio] <a name="Portfolio"></a>
+# 📖 Portfolio <a name="Portfolio"></a>
 
-> I make this with the help instraction of Microverse.
+> I make this with the help instraction of Microverse. In this project I create a hamburger menu dinamically.
 
-**[Portfolio]** is a Microverse assined project.
+**Portfolio** is a Microverse assined project. In this project I will apply js DOM manupulation step by step.
 
 ## 🛠 Built With <a name="built-with"></a>
 <li>Html</li>

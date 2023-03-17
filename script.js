@@ -1,14 +1,431 @@
-let btn = document.querySelector('#btn_hambrg');
+const btn = document.querySelector('#btn_hambrg');
+
+btn.addEventListener('click', () => {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('show');
+});
+
+const crossBtn = document.querySelector('.cross_btn');
+
+crossBtn.addEventListener('click', () => {
+  const navbar = document.querySelector('.navbar');
+
+  navbar.classList.toggle('hide');
+});
 
 
-btn.addEventListener('click',function() {
-    const navbar = document.querySelector('.navbar')
-    
+
+
+  const myProject = {
+    workTitle: 'My Recent Works',
+    workTech: ['css', 'html', 'bootstrap', 'ruby'],
+    cardTitle: 'Profesional Art Printing Data',
+    workImage:'images/',
+    workDescription:' A daily selection of privately persolized reads; no accounts sign up required has been the industryss standard dummy text ever sinch 1500 when an unkonwn printer took a standard dummy text',
+    cardDescription: 'A daily selections of privately personalized reads; no accounts or sign-ups required has been the industrys standard',
+    popUpDescriptionMin: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>',
+    popUpDescriptionMax:'<p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    workTitkeVector: 'images/work-desk-vec.png',
+    workVectoImg: 'images/title-img.png',
+  }
+
  
-  const p = document.createElement('p');
-  p.textContent = 'dsfjadlkjfkalsjfkafjf';
-  p.style.display = 'block';
-  navbar.appendChild(p);
+
+
+  function workInfo() {
+    const workSection = document.querySelector('.work-section');
+    workSection.innerHTML = ` <div class="work-header">
+    <h2>${myProject.workTitle}</h2>
+    <img class="work-desk-vector" src="${myProject.workTitkeVector}" alt="">
+    <img class="mobile-work-vector" src="${myProject.workVectoImg}" alt="" />
+   </div>
+   <div class="work-section-flex">
+    <div class="work-section-a">
+     <div class="work-main-img"></div>
+    </div>
+    <div class="work-section-b">
+      <h3>Multi-Post Stories</h3>
+      <p>
+      ${myProject.workDescription}
+      </p>
+      <ul class="work-ul">
+      
+      </ul>
+      <button type="button" class="work-see-project-btn" id="popUpBtnId">
+        See Project
+      </button>
+    </div>
+   </div>
+   `;
+
+
+   const workCard = document.querySelector('.work-cards-group');
+  
+    workCard.innerHTML = `<section id="work-cards">
+    <div class="single-card">
+      <h3 class="">${myProject.cardTitle}</h3>
+      <p class="description">
+       ${myProject.cardDescription}
+      </p>
+      <ul class="card-ul">
+        <li>html</li>
+        <li>bootstrap</li>
+        <li>ruby</li>
+      </ul>
+      <button type="button" class="card-button"  id="popUpBtnId">See Project</button>
+    </div>
+  </section>
+
+
+<section id="work-cards">
+    <div class="single-card">
+      <h3 class="">${myProject.cardTitle}</h3>
+      <p class="description">
+      ${myProject.cardDescription}
+      </p>
+      <ul class="card-ul">
+        <li>html</li>
+        <li>bootstrap</li>
+        <li>ruby</li>
+      </ul>
+      <button type="button" class="card-button2 card-button"  id="popUpBtnId">See Project</button>
+    </div>
+  </section>
+
+<section id="work-cards">
+<div class="single-card">
+  <h3 class="">${myProject.cardTitle}</h3>
+  <p class="description">
+  ${myProject.cardDescription}
+  </p>
+  <ul class="card-ul">
+    <li>html</li>
+    <li>bootstrap</li>
+    <li>ruby</li>
+  </ul>
+  <button type="button" class="card-button3 card-button"  id="popUpBtnId">See Project</button>
+</div>
+</section>
+
+
+<section id="work-cards">
+<div class="single-card">
+  <h3 class="">${myProject.cardTitle}</h3>
+  <p class="description">
+  ${myProject.cardDescription}
+  </p>
+  <ul class="card-ul">
+    <li>html</li>
+    <li>bootstrap</li>
+    <li>ruby</li>
+  </ul>
+  <button type="button" class="card-button4 card-button"  id="popUpBtnId">See Project</button>
+</div>
+</section>
+
+<section id="work-cards">
+<div class="single-card">
+  <h3 class="">${myProject.cardTitle}</h3>
+  <p class="description">
+  ${myProject.cardDescription}
+  </p>
+  <ul class="card-ul">
+    <li>html</li>
+    <li>bootstrap</li>
+    <li>ruby</li>
+  </ul>
+  <button type="button" class="card-button5 card-button"  id="popUpBtnId">See Project</button>
+</div>
+</section>
+
+
+<section id="work-cards">
+<div class="single-card">
+  <h3 class="">${myProject.cardTitle}</h3>
+  <p class="description">
+  ${myProject.cardDescription}
+  </p>
+  <ul class="card-ul">
+    <li>html</li>
+    <li>bootstrap</li>
+    <li>ruby</li>
+  </ul>
+  <button type="button" class="card-button6 card-button" id="popUpBtnId">See Project</button>
+</div>
+</section>`
+
+
+
+  }
+  
+  workInfo();
+  const allBtn = document.querySelector('button');
+
+
+
+  let ul = document.querySelector('.work-ul');
+  for(let i = 0; i < myProject.workTech.length; i ++ ){
+    let li = document.createElement('li');
+    li.textContent = myProject.workTech[i];
+    ul.appendChild(li);
+
+  };
+
+  /* popup section work button */
+
+  const popUpContent = ` <div class="pupup-section-one">
+  <div class="popup-header">
+    <h2>Multi Post Stories</h2>
+    <a href="#"><img id="PopCross" src="images/popCloseBtn.png" class="popupClose" alt=""></a>
+  </div>
+ <div class="work-ul">
+  <ul>
+    <li>html</li>
+    <li>Bootstrap</li>
+    <li>Ruby on Rails</li>
+  </ul>
+ </div>
+ <div class="popup-img">
+ 
+  <img src="images/worklarge.png" alt="">
+ </div>
+  
+</div>
+<div class="pupup-section-two">
+  <p class="p-min">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>
+  <p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent <br><br>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent
+  </p>
+  <button type="button" class="PoP">See Live</button>
+  <button type="button">See Source</button>
+</div>` 
+
+const body = document.querySelector('body')
+const workPopUp = document.querySelector('.pupup-window');
+
+const body2 = document.querySelector('.body');
+  
+
+
+  /* pop frist */
+
+
+  const workBtn = document.querySelector('.work-see-project-btn')
+  workBtn.addEventListener('click', function(){
+    body2.style.filter = 'blur(5px)';
    
+    workPopUp.innerHTML = popUpContent;
+
+ 
+
+  
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', function() {
+    if(isClicked){
+      workPopUp.style.display = 'none';
+    body.style.filter = 'blur(0)';
+    location.reload();
+    isClicked = false;
+    }else{
+      isClicked = true;
+    }
+  
+   /* popup section see project button */
 
 });
+
+
+  })
+
+    /* popC 1 */
+
+    const workBtn1 = document.querySelector('.card-button')
+    workBtn1.addEventListener('click', function(){
+      body2.style.filter = 'blur(5px)';
+     
+      workPopUp.innerHTML = popUpContent;
+  
+   
+  
+    
+    const popUpCrossBtn = document.querySelector('#PopCross');
+  
+    let isClicked = true;
+  
+    popUpCrossBtn.addEventListener('click', function() {
+      if(isClicked){
+        workPopUp.style.display = 'none';
+      body.style.filter = 'blur(0)';
+      location.reload();
+      isClicked = false;
+      }else{
+        isClicked = true;
+      }
+    
+     /* popup section see project button */
+  
+  });
+  
+  
+    })
+    /* popC 2 */
+
+    const workBtn2 = document.querySelector('.card-button2')
+    workBtn2.addEventListener('click', function(){
+      body2.style.filter = 'blur(5px)';
+     
+      workPopUp.innerHTML = popUpContent;
+  
+   
+  
+    
+    const popUpCrossBtn = document.querySelector('#PopCross');
+  
+    let isClicked = true;
+  
+    popUpCrossBtn.addEventListener('click', function() {
+      if(isClicked){
+        workPopUp.style.display = 'none';
+      body.style.filter = 'blur(0)';
+      location.reload();
+      isClicked = false;
+      }else{
+        isClicked = true;
+      }
+    
+     /* popup section see project button */
+  
+  });
+  
+  
+    })
+    /* popC 3 */
+
+    const workBtn3 = document.querySelector('.card-button3')
+    workBtn3.addEventListener('click', function(){
+      body2.style.filter = 'blur(5px)';
+     
+      workPopUp.innerHTML = popUpContent;
+  
+   
+  
+    
+    const popUpCrossBtn = document.querySelector('#PopCross');
+  
+    let isClicked = true;
+  
+    popUpCrossBtn.addEventListener('click', function() {
+      if(isClicked){
+        workPopUp.style.display = 'none';
+      body.style.filter = 'blur(0)';
+      location.reload();
+      isClicked = false;
+      }else{
+        isClicked = true;
+      }
+    
+     /* popup section see project button */
+  
+  });
+  
+  
+    })
+    /* popC 4 */
+
+    const workBtn4 = document.querySelector('.card-button4')
+    workBtn4.addEventListener('click', function(){
+      body2.style.filter = 'blur(5px)';
+     
+      workPopUp.innerHTML = popUpContent;
+  
+   
+  
+    
+    const popUpCrossBtn = document.querySelector('#PopCross');
+  
+    let isClicked = true;
+  
+    popUpCrossBtn.addEventListener('click', function() {
+      if(isClicked){
+        workPopUp.style.display = 'none';
+      body.style.filter = 'blur(0)';
+      location.reload();
+      isClicked = false;
+      }else{
+        isClicked = true;
+      }
+    
+     /* popup section see project button */
+  
+  });
+  
+  
+    })
+    /* popC 5 */
+
+    const workBtn5 = document.querySelector('.card-button5')
+    workBtn5.addEventListener('click', function(){
+      body2.style.filter = 'blur(5px)';
+     
+      workPopUp.innerHTML = popUpContent;
+  
+   
+  
+    
+    const popUpCrossBtn = document.querySelector('#PopCross');
+  
+    let isClicked = true;
+  
+    popUpCrossBtn.addEventListener('click', function() {
+      if(isClicked){
+        workPopUp.style.display = 'none';
+      body.style.filter = 'blur(0)';
+      location.reload();
+      isClicked = false;
+      }else{
+        isClicked = true;
+      }
+    
+     /* popup section see project button */
+  
+  });
+  
+  
+    })
+    /* popC 6 */
+
+    const workBtn6 = document.querySelector('.card-button6')
+    workBtn6.addEventListener('click', function(){
+      body2.style.filter = 'blur(5px)';
+     
+      workPopUp.innerHTML = popUpContent;
+  
+   
+  
+    
+    const popUpCrossBtn = document.querySelector('#PopCross');
+  
+    let isClicked = true;
+  
+    popUpCrossBtn.addEventListener('click', function() {
+      if(isClicked){
+        workPopUp.style.display = 'none';
+      body.style.filter = 'blur(0)';
+      location.reload();
+      isClicked = false;
+      }else{
+        isClicked = true;
+      }
+    
+     /* popup section see project button */
+  
+  });
+  
+  
+    })
+
+
+
