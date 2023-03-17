@@ -151,7 +151,7 @@ function workInfo() {
 workInfo();
 
 const ul = document.querySelector('.work-ul');
-for (let i = 0; i < myProject.workTech.length; i++) {
+for (let i = 0; i < myProject.workTech.length; i += 1) {
   const li = document.createElement('li');
   li.textContent = myProject.workTech[i];
 

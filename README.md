@@ -1,6 +1,6 @@
 
 
-<!-- TABLE OF CONTENTS -->
+
 
 # 📗 Table of Contents
 
@@ -24,7 +24,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
+
 
 # 📖 Portfolio <a name="Portfolio"></a>
 
@@ -39,7 +39,6 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe all tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>HTML</summary>
@@ -66,7 +65,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - **[HTML]**
 - **[Css]**
@@ -83,7 +81,6 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 Git clone https://github.com/SAZZAD1Q2/Portfolio.git
 Run in your browser
@@ -133,7 +130,6 @@ Github
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Dom manupulation]**
 - [ ] **[Data storage]**
@@ -145,7 +141,7 @@ Github
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-- If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +157,6 @@ Github
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Microverse for this inspiration.
 
