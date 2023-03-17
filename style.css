@@ -282,7 +282,8 @@ a {
 
 .work-section-b {
   display: grid;
-  grid-template-rows: repeat(auto auto auto auto auto);
+
+  /* grid-template-rows: repeat(auto auto auto auto auto); */
   width: 375px;
 }
 

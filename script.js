@@ -13,28 +13,22 @@ crossBtn.addEventListener('click', () => {
   navbar.classList.toggle('hide');
 });
 
+const myProject = {
+  workTitle: 'My Recent Works',
+  workTech: ['css', 'html', 'bootstrap', 'ruby'],
+  cardTitle: 'Profesional Art Printing Data',
+  workImage: 'images/',
+  workDescription: ' A daily selection of privately persolized reads; no accounts sign up required has been the industryss standard dummy text ever sinch 1500 when an unkonwn printer took a standard dummy text',
+  cardDescription: 'A daily selections of privately personalized reads; no accounts or sign-ups required has been the industrys standard',
+  popUpDescriptionMin: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>',
+  popUpDescriptionMax: '<p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+  workTitkeVector: 'images/work-desk-vec.png',
+  workVectoImg: 'images/title-img.png',
+};
 
-
-
-  const myProject = {
-    workTitle: 'My Recent Works',
-    workTech: ['css', 'html', 'bootstrap', 'ruby'],
-    cardTitle: 'Profesional Art Printing Data',
-    workImage:'images/',
-    workDescription:' A daily selection of privately persolized reads; no accounts sign up required has been the industryss standard dummy text ever sinch 1500 when an unkonwn printer took a standard dummy text',
-    cardDescription: 'A daily selections of privately personalized reads; no accounts or sign-ups required has been the industrys standard',
-    popUpDescriptionMin: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>',
-    popUpDescriptionMax:'<p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    workTitkeVector: 'images/work-desk-vec.png',
-    workVectoImg: 'images/title-img.png',
-  }
-
- 
-
-
-  function workInfo() {
-    const workSection = document.querySelector('.work-section');
-    workSection.innerHTML = ` <div class="work-header">
+function workInfo() {
+  const workSection = document.querySelector('.work-section');
+  workSection.innerHTML = ` <div class="work-header">
     <h2>${myProject.workTitle}</h2>
     <img class="work-desk-vector" src="${myProject.workTitkeVector}" alt="">
     <img class="mobile-work-vector" src="${myProject.workVectoImg}" alt="" />
@@ -58,10 +52,9 @@ crossBtn.addEventListener('click', () => {
    </div>
    `;
 
+  const workCard = document.querySelector('.work-cards-group');
 
-   const workCard = document.querySelector('.work-cards-group');
-  
-    workCard.innerHTML = `<section id="work-cards">
+  workCard.innerHTML = `<section id="work-cards">
     <div class="single-card">
       <h3 class="">${myProject.cardTitle}</h3>
       <p class="description">
@@ -152,28 +145,22 @@ crossBtn.addEventListener('click', () => {
   </ul>
   <button type="button" class="card-button6 card-button" id="popUpBtnId">See Project</button>
 </div>
-</section>`
+</section>`;
+}
 
+workInfo();
 
+const ul = document.querySelector('.work-ul');
+for (let i = 0; i < myProject.workTech.length; i++) {
+  const li = document.createElement('li');
+  li.textContent = myProject.workTech[i];
 
-  }
-  
-  workInfo();
-  const allBtn = document.querySelector('button');
+  ul.appendChild(li);
+}
 
+/* popup section work button */
 
-
-  let ul = document.querySelector('.work-ul');
-  for(let i = 0; i < myProject.workTech.length; i ++ ){
-    let li = document.createElement('li');
-    li.textContent = myProject.workTech[i];
-    ul.appendChild(li);
-
-  };
-
-  /* popup section work button */
-
-  const popUpContent = ` <div class="pupup-section-one">
+const popUpContent = ` <div class="pupup-section-one">
   <div class="popup-header">
     <h2>Multi Post Stories</h2>
     <a href="#"><img id="PopCross" src="images/popCloseBtn.png" class="popupClose" alt=""></a>
@@ -198,234 +185,186 @@ crossBtn.addEventListener('click', () => {
   </p>
   <button type="button" class="PoP">See Live</button>
   <button type="button">See Source</button>
-</div>` 
+</div>`;
 
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 const workPopUp = document.querySelector('.pupup-window');
 
 const body2 = document.querySelector('.body');
-  
 
+/* pop frist */
 
-  /* pop frist */
+const workBtn = document.querySelector('.work-see-project-btn');
+workBtn.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
 
+  workPopUp.innerHTML = popUpContent;
 
-  const workBtn = document.querySelector('.work-see-project-btn')
-  workBtn.addEventListener('click', function(){
-    body2.style.filter = 'blur(5px)';
-   
-    workPopUp.innerHTML = popUpContent;
-
- 
-
-  
   const popUpCrossBtn = document.querySelector('#PopCross');
 
   let isClicked = true;
 
-  popUpCrossBtn.addEventListener('click', function() {
-    if(isClicked){
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
       workPopUp.style.display = 'none';
-    body.style.filter = 'blur(0)';
-    location.reload();
-    isClicked = false;
-    }else{
+      body.style.filter = 'blur(0)';
+
+      isClicked = false;
+    } else {
       isClicked = true;
     }
-  
-   /* popup section see project button */
 
+    /* popup section see project button */
+  });
 });
 
+/* popC 1 */
 
-  })
+const workBtn1 = document.querySelector('.card-button');
+workBtn1.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
 
-    /* popC 1 */
+  workPopUp.innerHTML = popUpContent;
 
-    const workBtn1 = document.querySelector('.card-button')
-    workBtn1.addEventListener('click', function(){
-      body2.style.filter = 'blur(5px)';
-     
-      workPopUp.innerHTML = popUpContent;
-  
-   
-  
-    
-    const popUpCrossBtn = document.querySelector('#PopCross');
-  
-    let isClicked = true;
-  
-    popUpCrossBtn.addEventListener('click', function() {
-      if(isClicked){
-        workPopUp.style.display = 'none';
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
+      workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-      location.reload();
-      isClicked = false;
-      }else{
-        isClicked = true;
-      }
-    
-     /* popup section see project button */
-  
-  });
-  
-  
-    })
-    /* popC 2 */
 
-    const workBtn2 = document.querySelector('.card-button2')
-    workBtn2.addEventListener('click', function(){
-      body2.style.filter = 'blur(5px)';
-     
-      workPopUp.innerHTML = popUpContent;
-  
-   
-  
-    
-    const popUpCrossBtn = document.querySelector('#PopCross');
-  
-    let isClicked = true;
-  
-    popUpCrossBtn.addEventListener('click', function() {
-      if(isClicked){
-        workPopUp.style.display = 'none';
+      isClicked = false;
+    } else {
+      isClicked = true;
+    }
+
+    /* popup section see project button */
+  });
+});
+/* popC 2 */
+
+const workBtn2 = document.querySelector('.card-button2');
+workBtn2.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
+
+  workPopUp.innerHTML = popUpContent;
+
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
+      workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-      location.reload();
-      isClicked = false;
-      }else{
-        isClicked = true;
-      }
-    
-     /* popup section see project button */
-  
-  });
-  
-  
-    })
-    /* popC 3 */
 
-    const workBtn3 = document.querySelector('.card-button3')
-    workBtn3.addEventListener('click', function(){
-      body2.style.filter = 'blur(5px)';
-     
-      workPopUp.innerHTML = popUpContent;
-  
-   
-  
-    
-    const popUpCrossBtn = document.querySelector('#PopCross');
-  
-    let isClicked = true;
-  
-    popUpCrossBtn.addEventListener('click', function() {
-      if(isClicked){
-        workPopUp.style.display = 'none';
+      isClicked = false;
+    } else {
+      isClicked = true;
+    }
+
+    /* popup section see project button */
+  });
+});
+/* popC 3 */
+
+const workBtn3 = document.querySelector('.card-button3');
+workBtn3.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
+
+  workPopUp.innerHTML = popUpContent;
+
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
+      workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-      location.reload();
-      isClicked = false;
-      }else{
-        isClicked = true;
-      }
-    
-     /* popup section see project button */
-  
-  });
-  
-  
-    })
-    /* popC 4 */
 
-    const workBtn4 = document.querySelector('.card-button4')
-    workBtn4.addEventListener('click', function(){
-      body2.style.filter = 'blur(5px)';
-     
-      workPopUp.innerHTML = popUpContent;
-  
-   
-  
-    
-    const popUpCrossBtn = document.querySelector('#PopCross');
-  
-    let isClicked = true;
-  
-    popUpCrossBtn.addEventListener('click', function() {
-      if(isClicked){
-        workPopUp.style.display = 'none';
+      isClicked = false;
+    } else {
+      isClicked = true;
+    }
+
+    /* popup section see project button */
+  });
+});
+/* popC 4 */
+
+const workBtn4 = document.querySelector('.card-button4');
+workBtn4.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
+
+  workPopUp.innerHTML = popUpContent;
+
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
+      workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-      location.reload();
-      isClicked = false;
-      }else{
-        isClicked = true;
-      }
-    
-     /* popup section see project button */
-  
-  });
-  
-  
-    })
-    /* popC 5 */
 
-    const workBtn5 = document.querySelector('.card-button5')
-    workBtn5.addEventListener('click', function(){
-      body2.style.filter = 'blur(5px)';
-     
-      workPopUp.innerHTML = popUpContent;
-  
-   
-  
-    
-    const popUpCrossBtn = document.querySelector('#PopCross');
-  
-    let isClicked = true;
-  
-    popUpCrossBtn.addEventListener('click', function() {
-      if(isClicked){
-        workPopUp.style.display = 'none';
+      isClicked = false;
+    } else {
+      isClicked = true;
+    }
+
+    /* popup section see project button */
+  });
+});
+/* popC 5 */
+
+const workBtn5 = document.querySelector('.card-button5');
+workBtn5.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
+
+  workPopUp.innerHTML = popUpContent;
+
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
+      workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-      location.reload();
-      isClicked = false;
-      }else{
-        isClicked = true;
-      }
-    
-     /* popup section see project button */
-  
-  });
-  
-  
-    })
-    /* popC 6 */
 
-    const workBtn6 = document.querySelector('.card-button6')
-    workBtn6.addEventListener('click', function(){
-      body2.style.filter = 'blur(5px)';
-     
-      workPopUp.innerHTML = popUpContent;
-  
-   
-  
-    
-    const popUpCrossBtn = document.querySelector('#PopCross');
-  
-    let isClicked = true;
-  
-    popUpCrossBtn.addEventListener('click', function() {
-      if(isClicked){
-        workPopUp.style.display = 'none';
+      isClicked = false;
+    } else {
+      isClicked = true;
+    }
+
+    /* popup section see project button */
+  });
+});
+/* popC 6 */
+
+const workBtn6 = document.querySelector('.card-button6');
+workBtn6.addEventListener('click', () => {
+  body2.style.filter = 'blur(5px)';
+
+  workPopUp.innerHTML = popUpContent;
+
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  let isClicked = true;
+
+  popUpCrossBtn.addEventListener('click', () => {
+    if (isClicked) {
+      workPopUp.style.display = 'none';
       body.style.filter = 'blur(0)';
-      location.reload();
+
       isClicked = false;
-      }else{
-        isClicked = true;
-      }
-    
-     /* popup section see project button */
-  
+    } else {
+      isClicked = true;
+    }
+
+    /* popup section see project button */
   });
-  
-  
-    })
-
-
-
+});
