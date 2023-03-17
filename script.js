@@ -19,10 +19,14 @@ crossBtn.addEventListener('click', () => {
   const myProject = {
     workTitle: 'My Recent Works',
     workTech: ['css', 'html', 'bootstrap', 'ruby'],
+    cardTitle: 'Profesional Art Printing Data',
     workImage:'images/',
     workDescription:' A daily selection of privately persolized reads; no accounts sign up required has been the industryss standard dummy text ever sinch 1500 when an unkonwn printer took a standard dummy text',
+    cardDescription: 'A daily selections of privately personalized reads; no accounts or sign-ups required has been the industrys standard',
+    popUpDescriptionMin: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>',
+    popUpDescriptionMax:'<p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     workTitkeVector: 'images/work-desk-vec.png',
-    workVectoImg: 'images/title-img.png'
+    workVectoImg: 'images/title-img.png',
   }
 
  
@@ -47,7 +51,7 @@ crossBtn.addEventListener('click', () => {
       <ul class="work-ul">
       
       </ul>
-      <button type="button" class="work-see-project-btn">
+      <button type="button" class="work-see-project-btn" id="popUpBtnId">
         See Project
       </button>
     </div>
@@ -59,109 +63,105 @@ crossBtn.addEventListener('click', () => {
   
     workCard.innerHTML = `<section id="work-cards">
     <div class="single-card">
-      <h3 class="work-card-btn">Profesional Art Printing Data</h3>
+      <h3 class="">${myProject.cardTitle}</h3>
       <p class="description">
-        A daily selections of privately personalized reads; no accounts or
-        sign-ups required. has been the industry's standard
+       ${myProject.cardDescription}
       </p>
       <ul class="card-ul">
         <li>html</li>
         <li>bootstrap</li>
         <li>ruby</li>
       </ul>
-      <button type="button" class="card-button">See Project</button>
+      <button type="button" class="card-button"  id="popUpBtnId">See Project</button>
     </div>
   </section>
 
 
 <section id="work-cards">
     <div class="single-card">
-      <h3 class="work-card-btn">Profesional Art Printing Data</h3>
+      <h3 class="">${myProject.cardTitle}</h3>
       <p class="description">
-        A daily selections of privately personalized reads; no accounts or
-        sign-ups required. has been the industry's standard
+      ${myProject.cardDescription}
       </p>
       <ul class="card-ul">
         <li>html</li>
         <li>bootstrap</li>
         <li>ruby</li>
       </ul>
-      <button type="button" class="card-button">See Project</button>
+      <button type="button" class="card-button"  id="popUpBtnId">See Project</button>
     </div>
   </section>
 
 <section id="work-cards">
 <div class="single-card">
-  <h3 class="work-card-btn">Profesional Art Printing Data</h3>
+  <h3 class="">${myProject.cardTitle}</h3>
   <p class="description">
-    A daily selections of privately personalized reads; no accounts or
-    sign-ups required. has been the industry's standard
+  ${myProject.cardDescription}
   </p>
   <ul class="card-ul">
     <li>html</li>
     <li>bootstrap</li>
     <li>ruby</li>
   </ul>
-  <button type="button" class="card-button">See Project</button>
+  <button type="button" class="card-button"  id="popUpBtnId">See Project</button>
 </div>
 </section>
 
 
 <section id="work-cards">
 <div class="single-card">
-  <h3 class="work-card-btn">Profesional Art Printing Data</h3>
+  <h3 class="">${myProject.cardTitle}</h3>
   <p class="description">
-    A daily selections of privately personalized reads; no accounts or
-    sign-ups required. has been the industry's standard
+  ${myProject.cardDescription}
   </p>
   <ul class="card-ul">
     <li>html</li>
     <li>bootstrap</li>
     <li>ruby</li>
   </ul>
-  <button type="button" class="card-button">See Project</button>
+  <button type="button" class="card-button"  id="popUpBtnId">See Project</button>
 </div>
 </section>
 
 <section id="work-cards">
 <div class="single-card">
-  <h3 class="work-card-btn">Profesional Art Printing Data</h3>
+  <h3 class="">${myProject.cardTitle}</h3>
   <p class="description">
-    A daily selections of privately personalized reads; no accounts or
-    sign-ups required. has been the industry's standard
+  ${myProject.cardDescription}
   </p>
   <ul class="card-ul">
     <li>html</li>
     <li>bootstrap</li>
     <li>ruby</li>
   </ul>
-  <button type="button" class="card-button">See Project</button>
+  <button type="button" class="card-button"  id="popUpBtnId">See Project</button>
 </div>
 </section>
 
 
 <section id="work-cards">
 <div class="single-card">
-  <h3 class="work-card-btn">Profesional Art Printing Data</h3>
+  <h3 class="">${myProject.cardTitle}</h3>
   <p class="description">
-    A daily selections of privately personalized reads; no accounts or
-    sign-ups required. has been the industry's standard
+  ${myProject.cardDescription}
   </p>
   <ul class="card-ul">
     <li>html</li>
     <li>bootstrap</li>
     <li>ruby</li>
   </ul>
-  <button type="button" class="card-button">See Project</button>
+  <button type="button" class="card-button" id="popUpBtnId">See Project</button>
 </div>
 </section>`
 
 
- 
 
-   
   }
+  
   workInfo();
+  const allBtn = document.querySelector('button');
+
+
 
   let ul = document.querySelector('.work-ul');
   for(let i = 0; i < myProject.workTech.length; i ++ ){
@@ -170,9 +170,13 @@ crossBtn.addEventListener('click', () => {
     ul.appendChild(li);
 
   };
+
+  /* popup section work button */
   const body = document.querySelector('.body');
   const workPopUp = document.querySelector('.pupup-window');
-  const workBtn = document.querySelector('.work-see-project-btn')
+
+
+  const workBtn = document.querySelector('button')
   workBtn.addEventListener('click', function(){
     body.style.filter = 'blur(5px)';
    
@@ -218,7 +222,10 @@ crossBtn.addEventListener('click', () => {
       isClicked = true;
     }
   
-  
+   /* popup section see project button */
+
+
+ 
 
 });
 
