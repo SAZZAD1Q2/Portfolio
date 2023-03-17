@@ -163,10 +163,6 @@ crossBtn.addEventListener('click', () => {
   }
   workInfo();
 
-
-
-
-
   let ul = document.querySelector('.work-ul');
   for(let i = 0; i < myProject.workTech.length; i ++ ){
     let li = document.createElement('li');
@@ -174,3 +170,53 @@ crossBtn.addEventListener('click', () => {
     ul.appendChild(li);
 
   };
+  const body = document.querySelector('.body');
+  const workPopUp = document.querySelector('.pupup-window');
+  const workBtn = document.querySelector('.work-see-project-btn')
+  workBtn.addEventListener('click', function(){
+    body.style.filter = 'blur(5px)';
+   
+    workPopUp.innerHTML = ` <div class="pupup-section-one">
+    <div class="popup-header">
+      <h2>Multi Post Stories</h2>
+      <a href="#"><img id="PopCross" src="images/popCloseBtn.png" class="popupClose" alt=""></a>
+    </div>
+   <div class="work-ul">
+    <ul>
+      <li>html</li>
+      <li>Bootstrap</li>
+      <li>Ruby on Rails</li>
+    </ul>
+   </div>
+   <div class="popup-img">
+   
+    <img src="images/worklarge.png" alt="">
+   </div>
+    
+  </div>
+  <div class="pupup-section-two">
+    <p class="p-min">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>
+    <p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent <br><br>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent
+    </p>
+    <button type="button" class="PoP">See Live</button>
+    <button type="button">See Source</button>
+  </div>`
+
+  
+  const popUpCrossBtn = document.querySelector('#PopCross');
+
+  popUpCrossBtn.addEventListener('click', function() {
+    workPopUp.style.display = 'none';
+    body.style.filter = 'blur(0)';
+  
+
+});
+
+
+  })
+
+
+
+
+

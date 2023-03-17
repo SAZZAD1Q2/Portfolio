@@ -101,12 +101,14 @@ a {
   align-items: center;
   padding-top: 22px;
 }
+
 .work-ul ul li {
   margin-right: 12px;
   padding: 12px;
+
   /* width: 89px; */
 
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #dfe1e6;
 }
 
@@ -120,8 +122,6 @@ a {
 .p-max {
   display: none;
 }
-
-
 
 .pupup-section-two p {
   margin-left: 24px;
@@ -805,6 +805,7 @@ a {
 
   /* popup window */
   .pupup-window {
+    margin-bottom: -900px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -825,7 +826,6 @@ a {
   }
 
   .popup-header h2 {
-   
     min-width: 259px;
     font-family: "Roboto";
     font-style: normal;
@@ -846,10 +846,11 @@ a {
     align-items: center;
     margin-top: -16px;
   }
+
   .work-ul ul li {
     margin-right: 12px;
     padding: 12px;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #dfe1e6;
   }
 
@@ -888,7 +889,7 @@ a {
     margin-right: 24px;
     width: 129px;
     height: 48px;
-    left: 0px;
+    left: 0;
     top: 4px;
     background: #ff6b00;
     color: white;
