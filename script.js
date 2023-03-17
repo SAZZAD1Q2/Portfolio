@@ -206,9 +206,18 @@ crossBtn.addEventListener('click', () => {
   
   const popUpCrossBtn = document.querySelector('#PopCross');
 
+  let isClicked = true;
+
   popUpCrossBtn.addEventListener('click', function() {
-    workPopUp.style.display = 'none';
+    if(isClicked){
+      workPopUp.style.display = 'none';
     body.style.filter = 'blur(0)';
+    location.reload();
+    isClicked = false;
+    }else{
+      isClicked = true;
+    }
+  
   
 
 });
