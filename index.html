@@ -166,17 +166,17 @@
           </p>
         </div>
         <div class="contact-section-b">
-          <form action="https://formspree.io/f/xdovandv" method="post">
-            <input class="inp-name" type="text" placeholder="Full name" name="inp-name" required />
+          <form action="https://formspree.io/f/xdovandv" method="post" id="form">
+            <input class="inp-name" type="text" placeholder="Full name" name="inp-name" maxlength="30" required />
             
             
             <input
               type="email"
               placeholder="Email address"
               name="inp-email" class="inp-email"
+              id="email"
               required
             />
-          
             <textarea
               placeholder="Enter your text"
               name="inp-text"
@@ -184,9 +184,12 @@
               id=""
               cols="30"
               rows="10"
+              maxlength="500"
               class="inp-text"
             ></textarea>
+            <p class="errMessage"></p>
             <button class="contact-button" type="submit">Get in Touch</button>
+            
           </form>
         </div>
       </section>

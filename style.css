@@ -73,8 +73,6 @@ a {
   transform: translate(-50%, -50%);
   transition: 200ms ease-in-out;
 
-  /* height: 500px; */
-
   /* max-width: 80%; */
   padding-bottom: 10px;
   z-index: 10;
@@ -615,10 +613,6 @@ a {
 .skills {
   position: relative;
   padding-bottom: 12px;
-}
-
-.about-section-b .language {
-  /* color: white; */
 }
 
 .about-section-b h5 {
@@ -1206,9 +1200,9 @@ a {
     margin-bottom: 24px;
   }
 
-  .work-section-b button {
-    /* margin-top: 24px; */
-  }
+  /* .work-section-b button {
+    /* margin-top: 24px;
+  } */
 
   /* card section start */
 
@@ -1480,5 +1474,11 @@ a {
     width: 37.5vw;
     margin-bottom: 23px;
     border-bottom: 1px solid #e9e0e0;
+  }
+
+  .errMessage {
+    margin-top: -120px;
+    color: #b0171e;
+    padding-bottom: 120px;
   }
 }
