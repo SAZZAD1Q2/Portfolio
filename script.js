@@ -45,7 +45,7 @@ function workInfo() {
       <ul class="work-ul">
       
       </ul>
-      <button type="button" class="work-see-project-btn" id="popUpBtnId">
+      <button type="button" data-modal-target="#modal" class="work-see-project-btn" id="popUpBtnId">
         See Project
       </button>
     </div>
@@ -162,7 +162,8 @@ for (let i = 0; i < myProject.workTech.length; i += 1) {
 const popUpContent = ` <div class="pupup-section-one">
   <div class="popup-header">
     <h2>Multi Post Stories</h2>
-    <a href="#"><img id="PopCross" src="images/popCloseBtn.png" class="popupClose" alt=""></a>
+    <button data-close-button class='popupClose'>&times;</button>
+  
   </div>
  <div class="work-ul">
   <ul>
@@ -178,15 +179,14 @@ const popUpContent = ` <div class="pupup-section-one">
   
 </div>
 <div class="pupup-section-two">
-  <p class="p-min">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>
+  <p class="p-min">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a </p>
   <p class="p-max">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent <br><br>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
   </p>
-  <button type="button" class="PoP">See Live</button>
-  <button type="button">See Source</button>
+  <div class="popbtn"><button type="button" class="PoP">See Live</button>
+  <button type="button">See Source</button></div>
 </div>`;
 
-const body = document.querySelector('body');
 const workPopUp = document.querySelector('.pupup-window');
 
 const body2 = document.querySelector('.body');
@@ -199,21 +199,18 @@ workBtn.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
-
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-
+      body2.style.filter = 'blur(0px)';
+      // body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
 
@@ -225,21 +222,18 @@ workBtn1.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
 
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-      body.reload();
+      body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
 /* popC 2 */
@@ -250,21 +244,18 @@ workBtn2.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
 
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-      body.reload();
+      body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
 /* popC 3 */
@@ -275,21 +266,18 @@ workBtn3.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
 
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-      body.reload();
+      body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
 /* popC 4 */
@@ -300,21 +288,18 @@ workBtn4.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
 
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-      body.reload();
+      body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
 /* popC 5 */
@@ -325,21 +310,18 @@ workBtn5.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
 
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-      body.reload();
+      body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
 /* popC 6 */
@@ -350,23 +332,22 @@ workBtn6.addEventListener('click', () => {
 
   workPopUp.innerHTML = popUpContent;
 
-  const popUpCrossBtn = document.querySelector('#PopCross');
+  const popUpCrossBtn = document.querySelector('.popupClose');
 
   let isClicked = true;
 
   popUpCrossBtn.addEventListener('click', () => {
     if (isClicked) {
       workPopUp.style.display = 'none';
-      body.style.filter = 'blur(0)';
-      body.reload();
+      body2.style.filter = 'blur(0)';
       isClicked = false;
     } else {
       isClicked = true;
     }
-
-    /* popup section see project button */
   });
 });
+
+/* data storage section */
 
 const nameInput = document.querySelector('.inp-name');
 const emailInput = document.querySelector('.inp-email');

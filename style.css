@@ -14,7 +14,7 @@ a {
 }
 
 .body {
-  width: 100%;
+  width: 375px;
   overflow-x: hidden;
 }
 
@@ -66,8 +66,27 @@ a {
 
 /* popup window */
 .pupup-window {
-  width: 100vw;
   margin: 0 auto;
+  position: fixed;
+  top: 35%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+
+
+  /* height: 500px; */
+
+  /* max-width: 80%; */
+  padding-bottom: 10px;
+  z-index: 10;
+
+  /* own */
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.pupup-window.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-header {
@@ -76,6 +95,7 @@ a {
   justify-content: space-between;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: -39px;
 }
 
 .popup-header h2 {
@@ -87,14 +107,32 @@ a {
   font-size: 32px;
   line-height: 44px;
   color: #172b4d;
-  margin-right: 50px;
+
+  /* margin-right: 10px; */
+}
+
+.popup-header .popupClose {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20%;
+  margin-left: 30px;
+  margin-bottom: 70px;
 }
 
 .popup-img img {
-  margin-top: 34px;
+  margin-top: 24px;
   margin-left: 24px;
   width: 311px;
   height: 220px;
+}
+
+.popbtn {
+  margin-top: -109px;
+  display: flex;
 }
 
 .work-section img {
@@ -115,7 +153,8 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 22px;
+
+  /* padding-top: 22px; */
 }
 
 .work-section-b li {
@@ -154,7 +193,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #344563;
+  color: rgb(240, 242, 245);
 }
 
 .pupup-section-two button {
@@ -172,7 +211,16 @@ a {
   line-height: 24px;
 }
 
-/* main section start */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
 
 .main-part {
   width: 100vw;
@@ -814,14 +862,19 @@ a {
 
   /* popup window */
   .pupup-window {
-    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 68%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    width: 400px;
+    max-width: 80%;
     padding-bottom: 10px;
+    z-index: 10;
 
-    /* z-index: 1; */
+    /* own */
+    margin-top: 0;
 
     /* background-color: #979493;
     border-radius: 14px; */
@@ -844,6 +897,7 @@ a {
     font-size: 32px;
     line-height: 44px;
     color: #172b4d;
+    margin-bottom: 79px;
   }
 
   .framework img {
@@ -858,7 +912,13 @@ a {
     margin-left: -12vw;
   }
 
-  .popup-header a img {
+  .popup-header .popupClose {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-top: 2px;
     margin-left: 50px;
     margin-bottom: 70px;
@@ -903,7 +963,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #344563;
+    color: rgb(240, 242, 245);
   }
 
   .pupup-section-two button {
