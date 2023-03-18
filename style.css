@@ -1481,4 +1481,10 @@ a {
     margin-bottom: 23px;
     border-bottom: 1px solid #e9e0e0;
   }
+
+  .errMessage {
+    margin-top: -120px;
+    color: #b0171e;
+    padding-bottom: 120px;
+  }
 }

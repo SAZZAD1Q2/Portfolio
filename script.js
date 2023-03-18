@@ -347,6 +347,23 @@ workBtn6.addEventListener('click', () => {
   });
 });
 
+/* form validation */
+
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+const submitBtn = document.querySelector('.contact-button');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (email.value === email.value.toLowerCase()) {
+    form.submit();
+  } else {
+    const errMessage = document.querySelector('.errMessage');
+    errMessage.textContent = 'Email must be lower case';
+    submitBtn.insertAdjacentElement('afterend', errMessage);
+  }
+});
+
 /* data storage section */
 
 const nameInput = document.querySelector('.inp-name');
